@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ['0243232423', '0984654324', '0361323342', '0655435345', '03213441221'];
+    isPhoneNumberOfViettel(array);
+
+    function isPhoneNumberOfViettel(arr) {
+        let regexp = /^[0]+([8][6]|([9]+[678]))|([3]+[2-9])[0-9]{7}$/;
+        for (let i = 0; i < arr.length; i++) {
+            if (regexp.test(arr[i])) {
+                alert(arr[i] + 'is phone number of Viettel')
+            }else {
+                alert(arr[i] + ' is not phone number Viettel');
+            }
+        }
+    }
+</script>
+</body>
+</html>

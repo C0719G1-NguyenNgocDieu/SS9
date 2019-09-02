@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    CreatArray(arr = new Array(100));
+    console.log(arr);
+    console.log(LinearSearch(arr, 82));
+    console.log(BinarySearch(arr, 82));
+
+    function CreatArray(array) {
+        for (let i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+    }
+
+    function LinearSearch(array1, value) {
+        for (let i = 0; i <= array1.length; i++) {
+            if (value == array1[i]) {
+                return i;
+            }
+        }
+    }
+
+    function BinarySearch(array2, value) {
+        let left = 0;
+        let right = array2.length;
+        let mid;
+        let result = -1;
+        while (left < right) {
+            mid = Math.floor((left + right) / 2);
+            if (array2[mid] == value) {
+                result = mid;
+                break;
+            } else if (array2[mid] > value) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return result;
+    }
+
+</script>
+</body>
+</html>

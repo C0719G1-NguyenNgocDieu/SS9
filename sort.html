@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array= new Array(10);
+
+    function CreatArray(arr1) {
+        let random = Math.floor(Math.random() * arr1.length);
+        for (let i=0; i<arr1.length;i++) {
+            arr1[i]=random;
+        }
+    }
+
+    function Decrease(arr) {
+        let temp=0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i]<arr[j]){
+                    temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
